@@ -1,0 +1,304 @@
+:root{
+    --fs-12: 12px;
+    --fs-14: 14px;
+    --fs-16 : 16px;
+    --main-color: #303030;
+    --secondary-color: #555555;
+    --slogan-color: #1F50FF;
+    --fw-bold: 600;
+}
+@font-face {
+    font-family:'Work Sans', sans-serif;
+    src: url(../fonts/WorkSans-Regular.ttf);
+}
+
+.text-center{
+    text-align: center;
+}
+.bottom-border{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 15px 0;
+}
+.round-profile{
+    border-radius: 50%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar post events"
+    "sidebar cont events";
+    gap: 30px;
+    /* grid-template-columns: 1fr 3fr 1fr; */
+    /* grid-template-rows: 1fr 2fr 7fr; */
+    background-color: rgb(226, 221, 213);
+    font-family: 'Work Sans', sans-serif;
+}
+header{
+    background-color: #FFF;
+    grid-area: header;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 25px;
+}
+/************ styling items in header************** */
+.homepage-link{
+    display: flex;
+    align-items: center;
+}
+.homepage-link a{
+    font-size: var(--fs-14);
+    color: #555555;
+    margin-left: 20px;
+}
+.site-search {
+    position: relative;
+    margin-left: 65px;
+}
+.site-search input{
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 14px 50px;
+}
+.site-search img{
+    position: absolute;
+    left: 22px;
+    top: 11px;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-profile-img{
+    width: 46.32px;
+    height: 48.95px;
+    border: 10px solid #F2F2F2;;
+}
+/********* styling items in header *******/
+.sidebar{
+    grid-area: sidebar;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #FFF;
+}
+  /************** styling items in side bar********* */
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    
+}
+.profile img{
+    border: 10px solid #F2F2F2;;
+}
+.profile h2{
+    font-size: var(--fs-16);
+}
+.user-slogan{
+    color: var(--slogan-color);
+    font-size: var(--fs-12);
+    margin-top: 13px;
+}
+.user-info{
+    display: flex;
+    gap: 40px;
+}
+.user-info h4{
+    font-size: var(--fs-16);
+    font-weight: var(--fw-bold);
+}
+.user-info p{
+    font-size: var(--fs-12);
+    margin-top: 12px;
+}
+.sidebar-nav a{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    color: var(--main-color);
+    font-size: var(--fs-14);
+    margin-bottom: 25px;
+}
+.pinned-items h3{
+    font-size: var(--fs-16);
+    font-weight: var(--fw-bold);
+    margin: 20px auto;
+}
+.pinned-items img{
+    border-radius: 5px;
+}
+.pinned-items a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--fs-14);
+    color: var(--main-color);
+    margin: 10px auto;
+}
+.pinned-items li:last-child{
+    margin-top: 30px;
+}
+.pinned-items strong{
+    font-weight: var(--fw-bold);
+}
+ /************ styling items in sidebar ***********/
+.post-article{
+    grid-area: post;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 14px;
+}
+/********* styling items in post-article ***********/
+.post-text{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.post-article input{
+    background: #F6F6F6;
+    width: 550px;
+    border-radius: 28px;
+    padding: 20px;
+}
+.attach-files{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.post-article ul{
+    display: flex;
+    gap:  20px;
+}
+.post-article li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.share-btn{
+    position: relative;
+}
+.share-btn button{
+    background: #1F50FF;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: #FFF;
+    font-size: var(--fs-14);
+    cursor: pointer;
+}
+.share-btn img{
+    position: absolute;
+    left: 73.54%;
+    top: 45%;
+}
+/******** styling items in post-article *********/
+.cont{
+    background-color: #FFF;
+    grid-area: cont;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+/********* styling items in cont ********/
+.about-user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.about-user h3{
+    font-size: var(--fs-14);
+    color: var(--main-color);
+    font-weight: 500;
+}
+.about-user h4{
+    font-size: var(--fs-12);
+    color: var(--slogan-color);
+    margin: 14px auto;
+}
+.post{
+    margin-bottom: 10px;
+}
+.post p{
+    font-size: var(--fs-14);
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+.post-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.post ul{
+    display: flex;
+    gap: 23px;
+    margin-top: 16px;
+}
+.post-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-links a{
+    text-decoration: underline;
+    font-size: var(--fs-12);
+    color: var(--slogan-color);
+}
+/********* styling items in cont ********/
+.active-events-people{
+    background-color: #FFF;
+    grid-area: events;
+    border-radius: 10px;
+    padding: 21px;
+}
+/***************** styling items in active-events-people ***********/
+.active-events-people h3{
+    font-size: var(--fs-12);
+    color: var(--main-color);
+    font-weight: var(--fw-bold);
+    margin-bottom: 10px;
+}
+.last-articles img{
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+.last-articles a{
+    text-decoration: underline;
+    color: var(--slogan-color);
+    font-size: 8px;
+}
+.birthdays{
+    display: flex;
+    gap: 20px;
+}
+.active-events-people p{
+    font-size: 10px;
+    color: var(--secondary-color);
+    margin: 12px auto;
+}
+.my-contacts div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+.my-contacts h4{
+    font-weight: var(--fw-bold);
+    font-size: 10px;
+    color: var(--main-color);
+}
+.my-contacts ul img{
+    width: 44.72px;
+    height: 47.26px;
+}
+.my-contacts li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px auto;
+    color: var(--secondary-color);
+    font-size: var(--fs-12);
+    cursor: pointer;
+}
